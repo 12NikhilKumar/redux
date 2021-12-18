@@ -16,6 +16,18 @@ function reducer(state= initState,action){
                 ...state,
                 count : state.count - action.payload
             }
+        
+        case actionConstants.MULTIPLE_COUNT : 
+            return {
+                ...state,
+                count : state.count * action.payload
+            }
+            
+        case actionConstants.DVIDE_COUNT : 
+            return {
+                ...state,
+                count : state.count / action.payload
+            }    
         default :
             return state;
     }
