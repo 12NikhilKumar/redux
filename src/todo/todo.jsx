@@ -14,11 +14,11 @@ function Todo(){
         dispatch(action);
     };
     return (
-        <>
-        <h1>TODO LIST</h1>
+        <div style={{width:'500px', height:'500px',backgroundColor:'teal',margin:'auto',padding:'1rem'}}>
+        <h1 style={{textAlign:'center'}}>TODO LIST</h1>
         <TodoItem onAdd={handleAdd}/>
         <TodoList/>
-        </>
+        </div>
     )
 };
 export default Todo;
