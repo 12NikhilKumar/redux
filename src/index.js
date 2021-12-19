@@ -4,13 +4,18 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { Provider } from 'react-redux';
-import {store} from './redux/store'
-import Todo from './todo/todo';
-import Counter from './counter/counter';
+import {store} from './todoredux/store'
+import Todo from './jsontodo/todo'
+import AllRoutes from './todorouter/allrouter';
+import { BrowserRouter } from 'react-router-dom';
+import Navbar from './jsontodo/navbar';
 ReactDOM.render(
   <React.StrictMode>
     <Provider store={store}>
-      <Todo/>
+    <BrowserRouter>
+      <Navbar/>
+      <AllRoutes/>
+    </BrowserRouter>
     </Provider>
   </React.StrictMode>,
   document.getElementById('root')
