@@ -1,12 +1,15 @@
 import {actionConstants} from './action';
 import axios from 'axios';
+import { saveData } from '../reduxlocalstorage/localStorage';
 const initState = {
     todos: [
         {
             title: 'Nikhil',
             status: false,
             description: 'masai',
-            id: 1
+            id: 1,
+            isAuth : false,
+            token: null
         }
     ]
 }
@@ -34,6 +37,14 @@ function reducer(state = initState,action) {
                 ...state,
                 todos : state.todos.filter((item)=>item.id !== action.payload.id)
             }
+        case actionConstants.LOGIN_SUCCESS : {
+            saveData("token",action.payload.token);
+            return {
+                ...state,
+                isAuth : true,
+                token : action.payload.token
+            }
+        }    
         default :{
             return state
         }          
