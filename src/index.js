@@ -9,14 +9,13 @@ import Todo from './jsontodo/todo'
 import AllRoutes from './todorouter/allrouter';
 import { BrowserRouter } from 'react-router-dom';
 import Navbar from './jsontodo/navbar';
+import { AppContextProvider } from './reducercontext/appcontext';
+import Counter from './reducer/counter';
 ReactDOM.render(
   <React.StrictMode>
-    <Provider store={store}>
-    <BrowserRouter>
-      <Navbar/>
-      <AllRoutes/>
-    </BrowserRouter>
-    </Provider>
+    <AppContextProvider>
+      <Counter/>
+    </AppContextProvider>
   </React.StrictMode>,
   document.getElementById('root')
 );
