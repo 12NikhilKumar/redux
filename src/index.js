@@ -4,17 +4,13 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { Provider } from 'react-redux';
-import {store} from './todoredux/store'
-import Todo from './jsontodo/todo'
-import AllRoutes from './todorouter/allrouter';
-import { BrowserRouter } from 'react-router-dom';
-import Navbar from './jsontodo/navbar';
-import { AppContextProvider } from './reducercontext/appcontext';
-import Counter from './reducer/counter';
+import {store} from './todoredux/store';
+import Todo from './reducer1/todo'
+import {AppContextProvider} from './reducer1context/RedicerContext'
 ReactDOM.render(
   <React.StrictMode>
     <AppContextProvider>
-      <Counter/>
+    <Todo/>
     </AppContextProvider>
   </React.StrictMode>,
   document.getElementById('root')
