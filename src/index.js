@@ -9,9 +9,7 @@ import Todo from './reducer1/todo'
 import {AppContextProvider} from './reducer1context/RedicerContext'
 ReactDOM.render(
   <React.StrictMode>
-    <AppContextProvider>
-    <Todo/>
-    </AppContextProvider>
+    <App/>
   </React.StrictMode>,
   document.getElementById('root')
 );
