@@ -1,7 +1,7 @@
 import React from 'react';
 import PinItem from './pinitem';
 
-function PinInput({noOfBoxes=4,length=1,onChange}){
+function PinInput({noOfBoxes=4,length=4,onChange}){
     const [values,setValues] = React.useState(()=> 
     new Array(noOfBoxes).fill(0));
     const arr = new Array(noOfBoxes).fill(0);

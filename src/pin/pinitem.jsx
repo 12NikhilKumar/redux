@@ -1,6 +1,6 @@
 import React from 'react';
 const defaultStyle = {
-    width:'2rem',
+    width:'5rem',
     height:'2rem',
     borderRadius:'0.25rem',
     padding:'0.5rem',
