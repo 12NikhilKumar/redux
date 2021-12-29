@@ -4,12 +4,22 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { Provider } from 'react-redux';
-import {store} from './todoredux/store';
+import {store} from './evalutionRedux/store';
 import Todo from './reducer1/todo'
 import {AppContextProvider} from './reducer1context/RedicerContext'
+import Home from './evalution/home';
+import Cart from './evalution/cart';
+import { BrowserRouter } from 'react-router-dom/cjs/react-router-dom.min';
+import AllRoutes from './evalutionrotes/allroutes'
+import Navbar from './evalution/navbar'
 ReactDOM.render(
   <React.StrictMode>
-    <App/>
+    <BrowserRouter>
+    <Provider store={store}>
+      <AllRoutes/>
+      <Navbar />
+      </Provider>
+    </BrowserRouter>
   </React.StrictMode>,
   document.getElementById('root')
 );
