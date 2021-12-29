@@ -5,7 +5,8 @@ const initState = {
             id:1,
             name:"dove",
             price:50,
-            url:""
+            url:"",
+            quantity:1,
         }
     ]
 }
@@ -26,13 +27,13 @@ export function reducer(state = initState,action) {
         case actionConstants.INCREMENT_COUNT : {
             return {
                 ...state,
-                data : state.data.map((item)=>item.id === action?.payload?.id?{...item} :item)
+                data : state.data.map((item)=>item.id === action?.payload?.id?{...item,quantity:item.quantity+1} :item)
             }
         }
         case actionConstants.DECREMENT_COUNT : {
             return {
                 ...state,
-                data : state.data.map((item)=>item.id === action?.payload?.id?{...item} :item)
+                data : state.data.map((item)=>item.id === action?.payload?.id?{...item,quantity:item.quantity-1} :item)
             }
         }
         default: {

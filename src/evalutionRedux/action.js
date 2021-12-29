@@ -4,13 +4,14 @@ export const actionConstants = {
     INCREMENT_COUNT : 'INCREMENT_COUNT',
     DECREMENT_COUNT : 'DECREMENT_COUNT'
 }
-export const addCart = ({name,id,price,url})=>({
+export const addCart = ({name,id,price,url,quantity})=>({
     type: actionConstants.ADD_CART,
     payload : {
         id,
         name,
         price,
-        url
+        url,
+        quantity
     }
 })
 export const deleteCart = (id)=>({

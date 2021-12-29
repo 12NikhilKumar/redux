@@ -1,6 +1,6 @@
 import { Route } from "react-router-dom";
-import Cart from "../evalution/home";
-import Home from "../evalution/cart";
+import Home from "../evalution/home";
+import Cart from "../evalution/cart";
 const AllRoutes = ()=>{
     return (
         <>

@@ -9,7 +9,8 @@ const ListCard = ({id,url,name,price})=>{
             id: id,
             name: name,
             url: url,
-            price: price
+            price: price,
+            quantity:1
         })
         dispatch(action)
     }
@@ -43,7 +44,7 @@ const Home = ()=>{
         })
     },[]);
     return (
-        <div>
+        <div style={{marginTop:'100px'}}>
             {state?.map((item)=>(
                 <div>
                 <ListCard key={item.id} id={item.id} url={item.image} name={item.name} price={item.price}/>
